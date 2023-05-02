@@ -1,16 +1,17 @@
 import React from "react";
 import styles from "./main.css";
+import clanovi from "../clanovi";
 
-function Card() {
+function Card(props) {
   return (
     <div className="main">
       <div className="card">
         <div className="card-header">
-          <h1>Ime</h1>
-          <img className="profile-image" src="https://images01.military.com/sites/default/files/styles/full/public/2021-04/chucknorris.jpeg.jpg" />
+          <h1>{props.name}</h1>
+          <img className="profile-image" src={props.img} />
         </div>
         <div className="card-body">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+          <p>{props.opis}</p>
         </div>
         <div className="card-footer">
           <p>Copyright</p>
